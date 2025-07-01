@@ -1,9 +1,65 @@
+@use "./mixins" as m;
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&family=Bebas+Neue:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
 body {
+  font-family: 'PT Sans', sans-serif;
   margin: 0;
-  font-family: sans-serif;
-  background-color: #f7f7f7;
+  background-color: #F4F5F9;
+  @include m.center;
+  flex-direction: column;
+}
+
+#root {
+  width: 100%;
 }
 
 .app {
-  padding: 2rem;
+  width: 100%;
+  @include m.center;
+  // flex-direction: column;
+  margin: 0 auto;
+}
+
+h1 {
+  margin: 0 0 0 80px;
+  position: absolute;
+  top: 170px;
+  font-family: 'PT Sans', sans-serif;
+  font-size: 56px;
+  color: #42567A;
+  align-self: flex-start;
+}
+
+h1::before {
+  content: '';
+  left: -80px;
+  position: absolute;
+  display: flex;
+  width: 5px;
+  height: 100%;
+  background: linear-gradient(to bottom, #3877EE, #EF5DA8);
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 0.5s ease forwards;
+  animation-delay: 0.8s;
+}
+
+.fade-out {
+  opacity: 1;
+  animation: fadeOut 0.1s ease forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+  }
 }

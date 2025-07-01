@@ -1,0 +1,16 @@
+@mixin circle($size) {
+  width: $size;
+  height: $size;
+  border-radius: 50%;
+}
+
+@mixin center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin width {
+  width: 100%;
+  max-width: 1440px;
+}

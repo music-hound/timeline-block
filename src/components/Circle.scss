@@ -1,0 +1,8 @@
+@use "../mixins.scss" as m;
+
+.circle {
+  transition: all 0.8s ease-in-out;
+  position: absolute;
+  @include m.circle(530px);
+  border: 1px solid rgb(66, 86, 122,0.2);
+  }

@@ -1,0 +1,109 @@
+@use "../mixins" as m;
+
+.timeline-block {
+  position: relative;
+  height: 1080px;
+  @include m.width;
+  @include m.center;
+  flex-direction: column;
+  margin: 0 1em;
+  border-left: 1px solid rgb(66, 86, 122,0.1);
+  border-right: 1px solid rgb(66, 86, 122,0.1);
+  box-sizing: border-box;
+  gap: 2rem;
+}
+
+.circle-axis-Y {
+  position: absolute;
+  width: 1px;
+  height: 100%;
+  background-color: rgb(66, 86, 122,0.2);
+  transform: translateX(-50%);
+}
+
+.circle-axis-X {
+  position: absolute;
+  box-sizing: border-box;
+  width: calc(100% - 2em);
+  max-width: 1440px;
+  height: 1px;
+  background-color: rgb(66, 86, 122,0.2);
+}
+
+.timeline-slider-wrapper {
+  position: absolute;
+  bottom: 50px;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 0 0px;
+  box-sizing: border-box;
+  pointer-events: none; 
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    transition: 0.3s;
+    pointer-events: all;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: white;
+    border: none;
+    position: relative;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 8.8px;
+      height: 8.8px;
+      border-top: 2px solid #3877EE;
+      border-right: 2px solid #3877EE;
+      transform: translate(-60%, -50%) rotate(45deg);
+    }
+    .swiper-button-prev::after,
+    .swiper-button-next::after {
+      display: none !important;
+    }
+  }
+
+  .swiper-button-prev:hover,
+    .swiper-button-next:hover {
+      transform: scale(1.1);
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .swiper-button-prev::before {
+    transform: translate(-40%, -50%) rotate(-135deg);
+  }
+
+  .timeline-swiper {
+    max-width: 1280px;
+    flex: 1;
+    overflow: hidden;
+    position: relative;
+  }
+}
+
+.swiper-button-disabled {
+  opacity: 0;
+  pointer-events: none;
+}
+
+
+.swiper-fade {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease-in-out;
+
+  &.visible {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}

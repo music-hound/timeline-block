@@ -1,9 +1,11 @@
 import React from "react";
+import TimelineBlock from "./components/TimeLine";
+
 
 const App = () => {
   return (
     <div className="app">
-      <h1>Timeline Block Starter</h1>
+      <TimelineBlock />
     </div>
   );
 };
