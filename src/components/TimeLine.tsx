@@ -1,13 +1,17 @@
 import React, { useEffect, useState } from "react";
 import "./TimeLine.scss";
 import YearsRange from "./YearsRange";
-import { timeLineData } from '../timeLineData'; 
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation } from 'swiper/modules';
-import 'swiper/css';
+import { timeLineData } from "../timeLineData";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
 import { Slide } from "./Slide";
 import NavigationArrows from "./NavigationArrows";
 import Circle from "./Circle";
+
+const width = typeof window !== "undefined" ? window.innerWidth : 0;
+const isMobile = width < 768;
 
 const TimelineBlock = () => {
   const [activeIndex, setActiveIndexRaw] = useState(0);
@@ -24,64 +28,60 @@ const TimelineBlock = () => {
     }, 400);
   };
 
-
-
-useEffect(() => {
-  setVisible(false);
-  const timer = setTimeout(() => {
-    setVisible(true);
-  }, 400);
-  return () => clearTimeout(timer);
-}, []);
-
-
+  useEffect(() => {
+    setVisible(false);
+    const timer = setTimeout(() => {
+      setVisible(true);
+    }, 400);
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <div className="timeline-block">
-      <h1>Исторические <br /> даты</h1>
+      <h1>
+        Исторические <br /> даты
+      </h1>
 
-      <YearsRange activeIndex={activeIndex}/>
+      <YearsRange activeIndex={activeIndex} />
 
       <div className="circle-axis-Y" />
       <div className="circle-axis-X" />
 
-      <Circle
-        activeIndex={activeIndex}
-        setActiveIndex={setActiveIndex}
-      />
-
-      <NavigationArrows activeIndex={activeIndex} setActiveIndex={setActiveIndex}/>
+      <Circle activeIndex={activeIndex} setActiveIndex={setActiveIndex} />
 
       <div className="timeline-slider-wrapper">
         <button className="swiper-button-prev" />
-        
-        <div className={`timeline-swiper swiper-fade ${visible ? 'visible' : ''}`}>
-        <Swiper
-          modules={[ Navigation ]}
-          spaceBetween={50}
-          slidesPerView={3}
-          navigation={{
-            prevEl: '.swiper-button-prev',
-            nextEl: '.swiper-button-next',
-          }}
+
+        <div
+          className={`timeline-swiper swiper-fade ${visible ? "visible" : ""}`}
         >
-          {
-            timeLineData[activeIndex].events.map( (event, index) => (
+          <Swiper
+            modules={[Navigation, Pagination]}
+            spaceBetween={50}
+            slidesPerView={isMobile ? 2 : 3}
+            pagination={{
+              clickable: true,
+            }}
+            navigation={{
+              prevEl: ".swiper-button-prev",
+              nextEl: ".swiper-button-next",
+            }}
+          >
+            {timeLineData[activeIndex].events.map((event, index) => (
               <SwiperSlide key={index}>
-                <Slide
-                  year={event.year}
-                  description={event.description} 
-                />
+                <Slide year={event.year} description={event.description} />
               </SwiperSlide>
-            ))
-          }
-        </Swiper>
-      </div>
+            ))}
+          </Swiper>
+        </div>
 
         <button className="swiper-button-next" />
       </div>
-
-         </div>
+      <NavigationArrows
+        activeIndex={activeIndex}
+        setActiveIndex={setActiveIndex}
+      />
+    </div>
   );
 };
 

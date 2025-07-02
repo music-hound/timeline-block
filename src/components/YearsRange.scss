@@ -1,19 +1,18 @@
-
 .years-range {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    gap:50px;
-    font-size: 200px;
-    font-weight: bold;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  gap: 50px;
+  font-size: 200px;
+  font-weight: bold;
 }
 
 .year-from {
-    color: #5D5FEF;
+  color: #5d5fef;
 }
 
 .year-to {
-    color: #EF5DA8;
+  color: #ef5da8;
 }

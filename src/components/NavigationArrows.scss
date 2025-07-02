@@ -1,25 +1,25 @@
 @use "../mixins.scss" as m;
 
-.navigation-arrows{
-    position: absolute;
-    bottom: 250px;
-    align-self: flex-start;
-    margin-left: 5rem;
-    display: flex;
-    flex-direction: column;
+.navigation-arrows {
+  position: absolute;
+  bottom: 250px;
+  align-self: flex-start;
+  margin-left: 5rem;
+  display: flex;
+  flex-direction: column;
 
-    h4 {
-        margin: 0 0 20px 0;
-        font-family: 'PT Sans', sans-serif;
-        font-weight: 400;
-        font-size: 14px;
-        color: #42567A;
-    }
+  h4 {
+    margin: 0 0 20px 0;
+    font-family: "PT Sans", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #42567a;
+  }
 }
 
-.button-block{
-    @include m.center;
-    gap: 20px;
+.button-block {
+  @include m.center;
+  gap: 20px;
 }
 
 .arrow {
@@ -32,24 +32,24 @@
   position: relative;
   transition: 0.3s ease;
 
-    &::before {
-        content: "";
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        width: 8.8px;
-        height: 8.8px;
-        border-top: 2px solid #42567A;
-        border-right: 2px solid #42567A;
-        box-sizing: border-box;
-    }
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 8.8px;
+    height: 8.8px;
+    border-top: 2px solid #42567a;
+    border-right: 2px solid #42567a;
+    box-sizing: border-box;
+  }
 
-    &.right::before {
-        transform: translate(-60%, -50%) rotate(45deg);
-    }
-    &.left::before {
-        transform: translate(-40%, -50%) rotate(-135deg);
-    }
+  &.right::before {
+    transform: translate(-60%, -50%) rotate(45deg);
+  }
+  &.left::before {
+    transform: translate(-40%, -50%) rotate(-135deg);
+  }
 
   &.disabled {
     opacity: 0.5;

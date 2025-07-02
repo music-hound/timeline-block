@@ -1,11 +1,11 @@
 @use "./mixins" as m;
-@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&family=Bebas+Neue:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&family=Bebas+Neue:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
 
 body {
-  font-family: 'PT Sans', sans-serif;
+  font-family: "PT Sans", sans-serif;
   margin: 0;
-  background-color: #F4F5F9;
+  background-color: #f4f5f9;
   @include m.center;
   flex-direction: column;
 }
@@ -17,7 +17,6 @@ body {
 .app {
   width: 100%;
   @include m.center;
-  // flex-direction: column;
   margin: 0 auto;
 }
 
@@ -25,20 +24,20 @@ h1 {
   margin: 0 0 0 80px;
   position: absolute;
   top: 170px;
-  font-family: 'PT Sans', sans-serif;
+  font-family: "PT Sans", sans-serif;
   font-size: 56px;
-  color: #42567A;
+  color: #42567a;
   align-self: flex-start;
 }
 
 h1::before {
-  content: '';
+  content: "";
   left: -80px;
   position: absolute;
   display: flex;
   width: 5px;
   height: 100%;
-  background: linear-gradient(to bottom, #3877EE, #EF5DA8);
+  background: linear-gradient(to bottom, #3877ee, #ef5da8);
 }
 
 .fade-in {
