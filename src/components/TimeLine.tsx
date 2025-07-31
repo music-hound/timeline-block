@@ -39,7 +39,7 @@ const TimelineBlock = () => {
   return (
     <div className="timeline-block">
       <h1>
-        Исторические <br /> даты
+        Historical <br /> events
       </h1>
 
       <YearsRange activeIndex={activeIndex} />
