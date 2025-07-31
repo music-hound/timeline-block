@@ -14,119 +14,122 @@ interface TimeEvent {
 export const timeLineData: TimelineData[] = [
   {
     id: 1,
-    category: "Наука",
+    category: "Science",
     startYear: 2015,
     endYear: 2022,
     events: [
       {
         year: 2015,
         description:
-          "13 сентября — частное солнечное затмение, видимое в Южной Африке и части Антарктиды",
+          "September 13 – Partial solar eclipse visible in Southern Africa and parts of Antarctica",
       },
       {
         year: 2016,
         description:
-          "Телескоп «Хаббл» обнаружил самую удалённую из всех обнаруженных галактик, получившую обозначение GN-z11",
+          "The Hubble Space Telescope discovered the most distant galaxy ever observed, designated GN-z11",
       },
       {
         year: 2017,
         description:
-          "Компания Tesla официально представила первый в мире электрический грузовик Tesla Semi",
+          "Tesla officially unveiled the world’s first electric semi-truck, the Tesla Semi",
       },
       {
         year: 2018,
-        description: "Успешный запуск и посадка ракеты Falcon Heavy",
+        description: "Successful launch and landing of the Falcon Heavy rocket",
       },
       {
         year: 2019,
-        description: "Первая фотография черной дыры в галактике M87",
+        description: "First-ever photograph of a black hole in galaxy M87",
       },
       {
         year: 2020,
         description:
-          "Первый полет коммерческого космического корабля Crew Dragon",
+          "First flight of the commercial spacecraft Crew Dragon",
       },
       {
         year: 2021,
-        description: "Успешная посадка марсохода Perseverance на Марс",
+        description: "Successful landing of the Perseverance rover on Mars",
       },
-      { year: 2022, description: "Запуск космического телескопа James Webb" },
+      {
+        year: 2022,
+        description: "Launch of the James Webb Space Telescope",
+      },
     ],
   },
   {
     id: 2,
-    category: "Технологии",
+    category: "Technology",
     startYear: 2010,
     endYear: 2018,
     events: [
-      { year: 2010, description: "Выпуск первого iPad от Apple" },
-      { year: 2012, description: "Запуск Instagram для Android" },
-      { year: 2014, description: "Выпуск Apple Watch" },
-      { year: 2016, description: "Появление первых автомобилей Tesla Model 3" },
-      { year: 2018, description: "Запуск 5G сетей в Южной Корее" },
+      { year: 2010, description: "Release of the first iPad by Apple" },
+      { year: 2012, description: "Launch of Instagram for Android" },
+      { year: 2014, description: "Release of the Apple Watch" },
+      { year: 2016, description: "Introduction of the first Tesla Model 3 cars" },
+      { year: 2018, description: "Launch of 5G networks in South Korea" },
     ],
   },
   {
     id: 3,
-    category: "Искусство",
+    category: "Art",
     startYear: 2005,
     endYear: 2012,
     events: [
-      { year: 2005, description: "Основание YouTube" },
-      { year: 2007, description: "Открытие музея Гуггенхайма в Абу-Даби" },
-      { year: 2010, description: 'Премьера фильма "Начало" Кристофера Нолана' },
-      { year: 2012, description: "Открытие Лондонской Олимпиады 2012" },
+      { year: 2005, description: "Founding of YouTube" },
+      { year: 2007, description: "Opening of the Guggenheim Museum in Abu Dhabi" },
+      { year: 2010, description: 'Premiere of Christopher Nolan’s film "Inception"' },
+      { year: 2012, description: "Opening of the 2012 London Olympics" },
     ],
   },
   {
     id: 4,
-    category: "Спорт",
+    category: "Sports",
     startYear: 2000,
     endYear: 2008,
     events: [
-      { year: 2000, description: "Олимпийские игры в Сиднее" },
+      { year: 2000, description: "Olympic Games in Sydney" },
       {
         year: 2002,
-        description: "Чемпионат мира по футболу в Японии и Южной Корее",
+        description: "FIFA World Cup in Japan and South Korea",
       },
-      { year: 2004, description: "Олимпийские игры в Афинах" },
-      { year: 2006, description: "Чемпионат мира по футболу в Германии" },
-      { year: 2008, description: "Олимпийские игры в Пекине" },
+      { year: 2004, description: "Olympic Games in Athens" },
+      { year: 2006, description: "FIFA World Cup in Germany" },
+      { year: 2008, description: "Olympic Games in Beijing" },
     ],
   },
   {
     id: 5,
-    category: "Медицина",
+    category: "Medicine",
     startYear: 1998,
     endYear: 2005,
     events: [
       {
         year: 1998,
-        description: "Первое клонирование взрослого млекопитающего",
+        description: "First cloning of an adult mammal",
       },
-      { year: 2000, description: 'Завершение проекта "Геном человека"' },
-      { year: 2003, description: "Первая успешная трансплантация лица" },
-      { year: 2005, description: "Разработка первой вакцины против ВПЧ" },
+      { year: 2000, description: 'Completion of the Human Genome Project' },
+      { year: 2003, description: "First successful face transplant" },
+      { year: 2005, description: "Development of the first HPV vaccine" },
     ],
   },
   {
     id: 6,
-    category: "Экология",
+    category: "Ecology",
     startYear: 1992,
     endYear: 2000,
     events: [
       {
         year: 1992,
-        description: "Конференция ООН по окружающей среде в Рио-де-Жанейро",
+        description: "UN Conference on Environment and Development in Rio de Janeiro",
       },
       {
         year: 1995,
-        description: "Первая Конференция сторон по изменению климата",
+        description: "First Conference of the Parties on Climate Change",
       },
-      { year: 1997, description: "Подписание Киотского протокола" },
+      { year: 1997, description: "Signing of the Kyoto Protocol" },
       {
         year: 2000,
-        description: 'Запуск программы "Цели развития тысячелетия"',
+        description: 'Launch of the "Millennium Development Goals" program',
       },
     ],
   },
